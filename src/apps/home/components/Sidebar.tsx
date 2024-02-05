@@ -11,56 +11,44 @@ const Sidebar = () => {
         </div>
 
         <ul className="list-unstyled menu-elements">
-          <li className="active">
-            <a className="scroll-link" href="index.html">
+          <li className=" ">
+            <a className="scroll-link" href="/">
               Home
             </a>
           </li>
 
           <li>
-            <a className="scroll-link" href="about/index.html">
+            <a className="scroll-link" href="/about/">
               {" "}
               About us
             </a>
           </li>
 
           <li>
-            <a className="scroll-link" href="packages/index.html">
+            <a className="scroll-link" href="/packages/">
               {" "}
               Packages
             </a>
           </li>
           <li>
-            <a className="scroll-link" href="contact/index.html">
+            <a className="scroll-link" href="/contact-us">
               {" "}
               Contact us
             </a>
           </li>
           <li>
-            <a className="scroll-link" href="login/index.html">
+            <a className="scroll-link" href="/login">
               {" "}
               Login
             </a>
           </li>
           <li>
-            <a className="scroll-link" href="register/index.html">
+            <a className="scroll-link" href="/register/">
               {" "}
               Register
             </a>
           </li>
         </ul>
-        {/* 
-            <!--div class="to-top"> */}
-        <a
-          id="back-to-top"
-          className="btn btn-primary btn-customized-3"
-          href="#"
-          role="button"
-        >
-          <i className="fa fa-arrow-up"></i> Top
-        </a>
-        {/* 
-            <!--div class="to-top"> */}
       </nav>
     </>
   );

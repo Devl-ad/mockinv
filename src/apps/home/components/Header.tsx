@@ -15,17 +15,18 @@ const Header = () => {
             <div>
               <ul className="unstyled bitcoin-stats second text-center">
                 <li>
-                  <h6>12.820 BTC</h6>
+                  <h6>179k</h6>
                   <span>24 hour volume</span>
                 </li>
 
                 <li>
-                  <div
+                  {/* <div
                     className="btcwdgt-price"
                     data-bw-theme="light"
                     data-bw-cur="usd"
-                  ></div>
-                  <span>Live Bitcoin price</span>
+                  ></div> */}
+                  <h6>2M+</h6>
+                  <span>Active Users</span>
                 </li>
               </ul>
             </div>
@@ -45,7 +46,6 @@ const Header = () => {
         >
           <div className="container">
             <div className="site-nav-inner">
-              {/* <!-- Logo For ONLY Mobile display Starts --> */}
               <a className="logo-mobile" href="#">
                 <img
                   id="logo-mobile"
@@ -54,16 +54,7 @@ const Header = () => {
                   alt=""
                 />
               </a>
-              {/* <!-- Logo For ONLY Mobile display Ends --> */}
-              {/* <!-- Toggle Icon for Mobile Starts --> */}
-              {/* <!--button type="button" class="navbar-toggle" data-toggle="collapse"
-                        data-target="navbar-collapse">
-                        <span className="sr-only">Toggle navigation</span>
-                        <span className="icon-bar"></span>
-                        <span className="icon-bar"></span>
-                        <span className="icon-bar"></span>
-                    </button--> */}
-              {/* <!-- Toggle Icon for Mobile Ends --> */}
+
               <div className="  navbar-collapse navbar-responsive-collapse">
                 {/* <!-- Main Menu Starts --> */}
                 <ul className="nav navbar-nav">
