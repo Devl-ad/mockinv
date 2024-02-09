@@ -299,11 +299,11 @@
     $(".password-toggle").on("click", function () {
       console.log(is_visible);
       if (is_visible == false) {
-        $("#id_password1").attr("type", "text");
+        $("#id_password").attr("type", "text");
         $(this).removeClass("fa-eye-slash").addClass("fa-eye");
         is_visible = true;
       } else {
-        $("#id_password1").attr("type", "password");
+        $("#id_password").attr("type", "password");
         is_visible = false;
         $(this).removeClass("fa-eye").addClass("fa-eye-slash");
       }

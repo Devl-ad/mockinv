@@ -18,23 +18,20 @@ const HomeLayout = () => {
         </div>
       </div>
       {/* <!-- SVG Preloader Ends --> */}
+      {/* <!-- Sidebar --> */}
+      <Sidebar />
+      {/* <!-- End sidebar --> */}
 
-      <main className="wrapper">
-        {/* <!-- Sidebar --> */}
-        <Sidebar />
-        {/* <!-- End sidebar --> */}
+      {/* <!-- Dark overlay --> */}
+      <div className="overlay"></div>
 
-        {/* <!-- Dark overlay --> */}
-        <div className="overlay"></div>
+      {/* Header */}
+      <Header />
+      <Outlet />
 
-        {/* Header */}
-        <Header />
-        <Outlet />
-
-        {/* <!-- Sidebar --> */}
-        <Footer />
-        {/* <!-- End sidebar --> */}
-      </main>
+      {/* <!-- Sidebar --> */}
+      <Footer />
+      {/* <!-- End sidebar --> */}
     </>
   );
 };
