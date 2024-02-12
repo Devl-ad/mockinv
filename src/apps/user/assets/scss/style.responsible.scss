@@ -1,0 +1,22 @@
+@media (min-width: 767px) {
+  .hiddenMobile {
+    display: block !important;
+  }
+  .hiddenWide {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hiddenMobile {
+    display: none !important;
+  }
+  .hiddenWide {
+    display: block !important;
+  }
+
+  #sideBar {
+    width: 0;
+    overflow: hidden;
+  }
+}

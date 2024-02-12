@@ -1,0 +1,11 @@
+body {
+  overflow-x: hidden !important;
+
+  /* custom scrollbar */
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+div#root {
+  overflow-x: hidden;
+}
