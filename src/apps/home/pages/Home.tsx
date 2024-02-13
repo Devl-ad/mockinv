@@ -1,4 +1,11 @@
+// import { useEffect } from "react";
+import useScript from "../../../hooks/useScript";
+
 const Home = () => {
+  useScript(
+    "https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"
+  );
+
   return (
     <>
       {/* <!-- Slider Starts --> */}
