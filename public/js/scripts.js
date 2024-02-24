@@ -309,11 +309,6 @@
       }
     });
 
-    $("form").on("submit", function (e) {
-      var submit_btn = $(".submit_btn");
-      submit_btn.text("loading...").attr("disabled", "disabled");
-    });
-
     var infinite = new Waypoint.Infinite({
       element: $(".infinite-container")[0],
       onBeforePageLoad: function () {

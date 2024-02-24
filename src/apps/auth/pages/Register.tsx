@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import IconInput from "../../../components/IconInput";
 import { RegisterSchema } from "../schema";
+import { axiosPublic } from "../../../utils";
 
 const Register = () => {
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
@@ -14,9 +15,19 @@ const Register = () => {
       },
       validationSchema: RegisterSchema,
       onSubmit(values) {
-        console.log(values);
+        submitForm(values);
       },
     });
+
+  const submitForm = async (value: typeof values) => {
+    console.log(value);
+    try {
+      const { data } = await axiosPublic.post("/register/", value);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
