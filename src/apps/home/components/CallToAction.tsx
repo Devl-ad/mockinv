@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const CallToAction = () => {
   return (
     <>
@@ -16,9 +18,9 @@ const CallToAction = () => {
                 {/* <!-- Call To Action Text Ends -->
                             <!-- Call To Action Button Starts --> */}
                 <p className="action-btn ">
-                  <a className="btn btn-primary" href="/register">
+                  <Link className="btn btn-primary" to="/register">
                     Register Now
-                  </a>
+                  </Link>
                 </p>
                 {/* <!-- Call To Action Button Ends --> */}
               </div>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <>
@@ -12,9 +14,9 @@ const Footer = () => {
             <div className="row">
               <div className="col-md-4">
                 <div className="footer-logo">
-                  <a href="index-2.html">
+                  <Link to="index-2.html">
                     <img src="/images/logocaps.png" alt="/" />
-                  </a>
+                  </Link>
                 </div>
                 <div>
                   <p className="footer-text">
@@ -24,9 +26,9 @@ const Footer = () => {
                     in their country of residence.
                   </p>
                   <div className="discover-more-btn">
-                    <a href="certificate.jpg" className="pill-button-01 mr-3">
+                    <Link to="certificate.jpg" className="pill-button-01 mr-3">
                       Company Certificate
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -37,28 +39,28 @@ const Footer = () => {
                   <h5>Quick Link</h5>
                   <ul className="list-inline mb-0">
                     <li className="list-inline-item">
-                      <a href="/about/">About Our Firm</a>
+                      <Link to="/about/">About Our Firm</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="/">Home</a>
+                      <Link to="/">Home</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="/term-conditions/">Terms of Service</a>
+                      <Link to="/term-conditions/">Terms of Service</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="/faqs/">Knowledge Base</a>
+                      <Link to="/faqs/">Knowledge Base</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="/contact-us/">Contact Us</a>
+                      <Link to="/contact-us/">Contact Us</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="/packages/">Investment Offers</a>
+                      <Link to="/packages/">Investment Offers</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="/login/">Login</a>
+                      <Link to="/login/">Login</Link>
                     </li>
                     <li className="list-inline-item">
-                      <a href="/register/">Register</a>
+                      <Link to="/register/">Register</Link>
                     </li>
                   </ul>
                 </div>

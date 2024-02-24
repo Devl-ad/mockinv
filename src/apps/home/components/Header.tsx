@@ -1,17 +1,19 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <>
       <header className="header">
         <div className="mobile-menu wow slideInUp" id="mobile-menu">
           <div className="container">
-            <a className="mobile-logo" href="#">
+            <Link className="mobile-logo" to="/">
               <img
                 id="mobile-logo"
                 className="img-responsive"
                 src="/images/svg/s.svg"
                 alt=""
               />
-            </a>
+            </Link>
             <div>
               <ul className="unstyled bitcoin-stats second text-center">
                 <li>
@@ -59,23 +61,23 @@ const Header = () => {
                 {/* <!-- Main Menu Starts --> */}
                 <ul className="nav navbar-nav">
                   <li>
-                    <a href="/">Home</a>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <a href="/about">About Us</a>
+                    <Link to="/about">About Us</Link>
                   </li>
                   <li>
-                    <a href="/packages/">Packages</a>
+                    <Link to="/packages/">Packages</Link>
                   </li>
                   <li>
-                    <a href="/contact-us">Contact Us</a>
+                    <Link to="/contact-us">Contact Us</Link>
                   </li>
 
                   <li>
-                    <a href="/register/">Register</a>
+                    <Link to="/register/">Register</Link>
                   </li>
                   <li>
-                    <a href="/login/">Login</a>
+                    <Link to="/login/">Login</Link>
                   </li>
                 </ul>
                 {/* <!-- Main Menu Ends --> */}

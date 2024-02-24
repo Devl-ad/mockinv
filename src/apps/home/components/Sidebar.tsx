@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Sidebar = () => {
   return (
     <>
@@ -12,41 +14,41 @@ const Sidebar = () => {
 
         <ul className="list-unstyled menu-elements">
           <li className=" ">
-            <a className="scroll-link" href="/">
+            <Link className="scroll-link" to="/">
               Home
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a className="scroll-link" href="/about/">
+            <Link className="scroll-link" to="/about/">
               {" "}
               About us
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a className="scroll-link" href="/packages/">
+            <Link className="scroll-link" to="/packages/">
               {" "}
               Packages
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="scroll-link" href="/contact-us">
+            <Link className="scroll-link" to="/contact-us">
               {" "}
               Contact us
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="scroll-link" href="/login">
+            <Link className="scroll-link" to="/login">
               {" "}
               Login
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="scroll-link" href="/register/">
+            <Link className="scroll-link" to="/register/">
               {" "}
               Register
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
