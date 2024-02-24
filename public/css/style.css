@@ -4578,3 +4578,10 @@ section.auth-section {
 .info-form{
   text-transform: capitalize;
 }
+
+
+
+.invalid-feedback {
+  display: block !important; 
+  
+}

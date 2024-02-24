@@ -1,6 +1,23 @@
+import { useFormik } from "formik";
 import IconInput from "../../../components/IconInput";
+import { RegisterSchema } from "../schema";
 
 const Register = () => {
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+    useFormik({
+      initialValues: {
+        fullname: "",
+        username: "",
+        email: "",
+        phone: "",
+        password: "",
+      },
+      validationSchema: RegisterSchema,
+      onSubmit(values) {
+        console.log(values);
+      },
+    });
+
   return (
     <>
       <section className="auth-section register" style={{ height: "100%" }}>
@@ -11,7 +28,7 @@ const Register = () => {
                 <div className="row">
                   <div className=" col-xl-12 justify-content-center text-center">
                     {/* <!-- Logo Starts --> */}
-                    <a className="visible-xs" href="index.html">
+                    <a className="visible-xs" href="/">
                       <img
                         id="logo"
                         style={{ width: "30%" }}
@@ -34,11 +51,7 @@ const Register = () => {
                         </div>
                         {/* <!-- Section Title Ends -->
                                             <!-- Form Starts --> */}
-                        <form
-                          className="register-form"
-                          method="POST"
-                          action="/register/"
-                        >
+                        <form className="register-form" onSubmit={handleSubmit}>
                           <IconInput
                             name="fullname"
                             required={true}
@@ -48,6 +61,11 @@ const Register = () => {
                             label={false}
                             children={null}
                             className={""}
+                            handleBlur={handleBlur}
+                            handleChange={handleChange}
+                            error={errors.fullname}
+                            touched={touched.fullname}
+                            value={values.fullname}
                           />
 
                           <IconInput
@@ -59,6 +77,11 @@ const Register = () => {
                             label={false}
                             children={null}
                             className={""}
+                            handleBlur={handleBlur}
+                            handleChange={handleChange}
+                            error={errors.username}
+                            touched={touched.username}
+                            value={values.username}
                           />
 
                           <IconInput
@@ -70,6 +93,11 @@ const Register = () => {
                             label={false}
                             children={null}
                             className={""}
+                            handleBlur={handleBlur}
+                            handleChange={handleChange}
+                            error={errors.email}
+                            touched={touched.email}
+                            value={values.email}
                           />
 
                           <IconInput
@@ -81,6 +109,11 @@ const Register = () => {
                             label={false}
                             children={null}
                             className={""}
+                            handleBlur={handleBlur}
+                            handleChange={handleChange}
+                            error={errors.phone}
+                            touched={touched.phone}
+                            value={values.phone}
                           />
 
                           <IconInput
@@ -91,6 +124,11 @@ const Register = () => {
                             type="password"
                             label={false}
                             className={""}
+                            handleBlur={handleBlur}
+                            handleChange={handleChange}
+                            error={errors.password}
+                            touched={touched.password}
+                            value={values.password}
                           >
                             <div className="input-group-addon">
                               <span

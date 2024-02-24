@@ -7,6 +7,11 @@ interface props {
   icon: string;
   children: JSX.Element | null;
   className: string;
+  error?: string | undefined;
+  touched?: boolean;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleBlur: (e: React.FocusEvent<unknown, Element>) => void;
+  value: string | number;
 }
 const IconInput = ({
   label,
@@ -17,6 +22,11 @@ const IconInput = ({
   icon,
   className,
   children,
+  handleBlur,
+  handleChange,
+  error,
+  value,
+  touched,
 }: props) => {
   return (
     <>
@@ -32,10 +42,15 @@ const IconInput = ({
           <input
             type={type}
             name={name}
-            className="form-control textinput textInput form-control"
+            className={`form-control textinput textInput form-control  
+              ${error && touched ? "is-invalid" : null}
+              `}
             placeholder={placeholder}
             required={required}
             id={`id_${name}`}
+            value={value}
+            onChange={handleChange}
+            onBlur={handleBlur}
           />
 
           {children ? (
@@ -50,7 +65,7 @@ const IconInput = ({
             ""
           )}
         </div>
-        <p className="invalid-feedback">{}</p>
+        {error && touched ? <p className="invalid-feedback">{error}</p> : null}
       </div>
     </>
   );
