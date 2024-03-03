@@ -2,8 +2,29 @@ import { useFormik } from "formik";
 import IconInput from "../../../components/IconInput";
 import { RegisterSchema } from "../schema";
 import { axiosPublic } from "../../../utils";
+import { useEffect, useState } from "react";
+import { ExistingDetailsReqInterface } from "../../../types";
 
 const Register = () => {
+  const [emails, setEmails] = useState<string[]>([]);
+  const [username, setUsername] = useState<string[]>([]);
+  useEffect(() => {
+    axiosPublic
+      .get<ExistingDetailsReqInterface>("/register/")
+      .then(({ data }) => {
+        console.log({ data });
+        setEmails(data.emails);
+        setUsername(data.usernames);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+
+    // return () => {
+
+    // }
+  }, []);
+
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues: {
@@ -13,14 +34,14 @@ const Register = () => {
         phone: "",
         password: "",
       },
-      validationSchema: RegisterSchema,
+      validationSchema: RegisterSchema(emails, username),
       onSubmit(values) {
         submitForm(values);
       },
     });
 
   const submitForm = async (value: typeof values) => {
-    console.log(value);
+    console.log(emails, username);
     try {
       const { data } = await axiosPublic.post("/register/", value);
       console.log(data);
