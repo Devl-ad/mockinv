@@ -1,5 +1,6 @@
 import { RouteInterface } from "../../../types";
 import { getRandomNumber } from "../../../utils/";
+import Confirm from "../pages/Confirm";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ResetPassword from "../pages/ResetPassword";
@@ -25,6 +26,11 @@ const AuthRoutes: RouteInterface[] = [
     id: getRandomNumber(),
     element: <SetPassword />,
     path: "/set-password",
+  },
+  {
+    id: getRandomNumber(),
+    element: <Confirm />,
+    path: "/confirm-mail",
   },
 ];
 export default AuthRoutes;

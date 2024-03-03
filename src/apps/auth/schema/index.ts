@@ -14,6 +14,7 @@ export const RegisterSchema = (
       .required("Fullname is required"),
     username: yup
       .string()
+      .matches(/^\S*$/, "Username cannot contain spaces")
       .min(4)
       .notOneOf(ExistingUsername, "A user with this Username already exist")
       .required("Username is required"),

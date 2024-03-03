@@ -3,11 +3,16 @@ import IconInput from "../../../components/IconInput";
 import { RegisterSchema } from "../schema";
 import { axiosPublic } from "../../../utils";
 import { useEffect, useState } from "react";
-import { ExistingDetailsReqInterface } from "../../../types";
+import { ExistingDetailsReqInterface, RegisterResponse } from "../../../types";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import CustomButton from "../../../components/CustomButton";
 
 const Register = () => {
   const [emails, setEmails] = useState<string[]>([]);
   const [username, setUsername] = useState<string[]>([]);
+  const [loading, setloading] = useState(false);
+  const navigate = useNavigate();
   useEffect(() => {
     axiosPublic
       .get<ExistingDetailsReqInterface>("/register/")
@@ -41,10 +46,32 @@ const Register = () => {
     });
 
   const submitForm = async (value: typeof values) => {
-    console.log(emails, username);
     try {
-      const { data } = await axiosPublic.post("/register/", value);
-      console.log(data);
+      const { data } = await axiosPublic.post<RegisterResponse>(
+        "/register/",
+        value
+      );
+      if (data.msg) {
+        navigate("/confirm-mail");
+      } else if (data.password) {
+        if (Array.isArray(data.password)) {
+          data.password.forEach((msg) => {
+            toast.error(msg);
+          });
+        } else {
+          toast.error(data.password);
+        }
+      } else if (data.email) {
+        if (Array.isArray(data.email)) {
+          data.email.forEach((msg) => {
+            toast.error(msg);
+          });
+        } else {
+          toast.error(data.email);
+        }
+      }
+
+      setloading(false);
     } catch (error) {
       console.log(error);
     }
@@ -174,12 +201,13 @@ const Register = () => {
 
                           {/* <!-- Submit Form Button Starts --> */}
                           <div className="form-group">
-                            <button
-                              className="btn btn-primary submit_btn"
+                            <CustomButton
+                              color="primary"
+                              text="Submit"
+                              loading={loading}
                               type="submit"
-                            >
-                              create account
-                            </button>
+                            />
+
                             <p className="text-center">
                               already have an account ?{" "}
                               <a href="/login">Login</a>
