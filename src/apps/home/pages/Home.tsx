@@ -30,13 +30,13 @@ const Home = () => {
                   </h3>
                   <p>
                     <a
-                      href="#about"
+                      href="/register"
                       className="slider btn btn-primary"
                       style={{ marginRight: "10px" }}
                     >
                       Get started
                     </a>
-                    <a href="#about" className="slider btn btn-primary">
+                    <a href="/login" className="slider btn btn-primary">
                       Login
                     </a>
                   </p>
