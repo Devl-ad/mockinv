@@ -28,7 +28,7 @@ const About = () => {
                 </div>
 
                 <p className="about-content">
-                  Bybit Tradefunds is a United Arab Emirate based and registered
+                  Wealthlines is a United Arab Emirate based and registered
                   company which offers a guaranteed returns and a predictable
                   source of income unlike the proof of work system where assets
                   are rewarded through a mathmatetical process with a good
@@ -40,17 +40,17 @@ const About = () => {
               </div>
               <div className="col-12">
                 <p>
-                  Bybit Tradefunds Limited Investments is a globally respected
-                  and responsible investment fund institution incorporated in
-                  United Arab Emirate. It was created for the purpose of
-                  providing it's members with the safest and most secure capital
-                  investment services, with the best possible and achievable
-                  returns at the best risk management framework.
+                  Wealthlines Limited Investments is a globally respected and
+                  responsible investment fund institution incorporated in United
+                  Arab Emirate. It was created for the purpose of providing it's
+                  members with the safest and most secure capital investment
+                  services, with the best possible and achievable returns at the
+                  best risk management framework.
                   <br />
-                  Bybit Tradefunds Investments is a distinctive wealth and
-                  investment management firm actively building enduring value
-                  for our clients. We actively manage your portfolio to ensure
-                  it remains appropriate for the ever-changing conditions in the
+                  Wealthlines Investments is a distinctive wealth and investment
+                  management firm actively building enduring value for our
+                  clients. We actively manage your portfolio to ensure it
+                  remains appropriate for the ever-changing conditions in the
                   global economy and financial markets. <br />
                   <br />
                   We have a well-defined investment process, which is
@@ -58,12 +58,12 @@ const About = () => {
                   strong yet flexible framework for our investment professionals
                   to work together, sharing ideas and challenging each other’s
                   views. It is constantly evolving and we continue to invest in
-                  the resources required to ensure it remains robust. Bybit
-                  Tradefunds Investments officially initiated crypto currency
-                  assets and trading in the year 2018, a new team of experts and
-                  professionals who have many years of experience in the
-                  finanancial market and cryptocurrency was formed joining the
-                  project alongside with the initial exchanges of stocks and
+                  the resources required to ensure it remains robust.
+                  wealthlines Tradefunds Investments officially initiated crypto
+                  currency assets and trading in the year 2018, a new team of
+                  experts and professionals who have many years of experience in
+                  the finanancial market and cryptocurrency was formed joining
+                  the project alongside with the initial exchanges of stocks and
                   securities, Introducing new commodities (involves extraction
                   of some rare and highly expensive/valuable raw materials) such
                   as , jade stone, Californium and Crude oil etc. The system
@@ -77,7 +77,7 @@ const About = () => {
                   Improved Security: Investors funds are kept in a segregated
                   account, all funds deposited by a user is held in a separate
                   segregated account. This means that even in the highly
-                  unlikely event of Bybit Tradefunds Investments Bankruptcy,
+                  unlikely event of Wealthlines Investments Bankruptcy,
                   investor's funds will be safe and accessible to them. We have
                   a dedicated team for clients who want 100% ethical and
                   sustainable investment management. We achieve results by
@@ -100,9 +100,9 @@ const About = () => {
                   WHAT WE DO
                   <br />
                   <br />
-                  Bybit Tradefunds Investments is a leading investment provider
-                  to financial market professionals. Our technical strategies
-                  cover forex, binary options and crypto. Our market depth and
+                  Wealthlines Investments is a leading investment provider to
+                  financial market professionals. Our technical strategies cover
+                  forex, binary options and crypto. Our market depth and
                   knowledge are attributed to our acquired experience on trading
                   floors of many banking institutions.
                   <br />
@@ -237,16 +237,16 @@ const About = () => {
                     <h6>3. Native iOS and Android app </h6>
                     <p className="mb-0">
                       The number one result from the product survey we conducted
-                      was that our users would like to use Bybit Tradefunds on
-                      an iOS or Android app, just like the other programs.
-                      Therefore, we are going to build a native iOS and Android
-                      app! This could also possibly mean an integration of Bybit
+                      was that our users would like to use Wealthlines on an iOS
+                      or Android app, just like the other programs. Therefore,
+                      we are going to build a native iOS and Android app! This
+                      could also possibly mean an integration of wealthlines
                       Tradefunds within another native apps.
                       <p>
                         In addition to these bigger features, there are also
                         other improvements that we’ll be working on. Stay up to
                         date by subscribing to our bi-weekly newsletter. You can
-                        subscribe by creating Bybit Tradefunds account.
+                        subscribe by creating Wealthlines account.
                       </p>
                     </p>
                   </div>

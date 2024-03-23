@@ -72,7 +72,7 @@ const Footer = () => {
                   <div className="row align-items-right">
                     <div className="col-md-6">
                       <p className="mb-0" style={{ color: "#fff" }}>
-                        Bybit Tradefunds © 2023. All Rights Reserved.
+                        Wealthlines © 2023. All Rights Reserved.
                       </p>
                     </div>
                   </div>

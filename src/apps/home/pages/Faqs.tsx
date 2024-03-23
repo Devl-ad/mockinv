@@ -35,7 +35,7 @@ const Faqs = () => {
                       aria-expanded="true"
                       aria-controls="collapseOne"
                     >
-                      <h3 className="mb-0">Who is Bybit Tradefunds?</h3>
+                      <h3 className="mb-0">Who is Wealthlines?</h3>
                     </a>
                   </div>
                   <div
@@ -47,7 +47,7 @@ const Faqs = () => {
                   >
                     <div className="card-body">
                       <p>
-                        Bybit Tradefunds is a globally respected and responsible
+                        Wealthlines is a globally respected and responsible
                         investment fund institution incorporated in United
                         Kingdom and governed by the laws and rules of the
                         securities and exchange commission.
@@ -95,13 +95,13 @@ const Faqs = () => {
                   >
                     <div className="card-body">
                       <p>
-                        At Bybit Tradefunds we take security very seriously.
-                        Because of this we have external parties testing the
-                        setup that we’ve created. Internally, we also make use
-                        of extensive bug-testing to iron out any flaws.
-                        Additionally, all traffic to our servers makes use of
-                        extensive encryption making sure no outside parties get
-                        their hands on any of your data.
+                        At Wealthlines we take security very seriously. Because
+                        of this we have external parties testing the setup that
+                        we’ve created. Internally, we also make use of extensive
+                        bug-testing to iron out any flaws. Additionally, all
+                        traffic to our servers makes use of extensive encryption
+                        making sure no outside parties get their hands on any of
+                        your data.
                       </p>
 
                       <p>
@@ -192,16 +192,15 @@ const Faqs = () => {
                     <div className="card-body">
                       <p>
                         As a partner, if you refer investors to invest with
-                        Bybit Tradefunds, you will be rewarded by a commission
-                        for each investment they make. Each of your referred
+                        Wealthlines, you will be rewarded by a commission for
+                        each investment they make. Each of your referred
                         investors have the potential to generate lifetime
                         commissions.
                         <br />
                         <br />
-                        All Bybit Tradefunds users who joined through your
-                        personal referral link will become your referrals and
-                        they will be counted as active referrals, if they make
-                        investment.
+                        All Wealthlines users who joined through your personal
+                        referral link will become your referrals and they will
+                        be counted as active referrals, if they make investment.
                       </p>
 
                       <p>
@@ -279,7 +278,7 @@ const Faqs = () => {
                         If you own shares in our company at that time, you’ll
                         receive dividend. You can acquire your share in our
                         company by sending a request to the MD office email
-                        support@bybit-tradefunds.com
+                        support@ wealthlines-tradefunds.com
                       </p>
 
                       <p>

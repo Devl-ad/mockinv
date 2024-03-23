@@ -74,10 +74,10 @@ const Header = () => {
                   </li>
 
                   <li>
-                    <Link to="/register/">Register</Link>
+                    <a href="/register/">Register</a>
                   </li>
                   <li>
-                    <Link to="/login/">Login</Link>
+                    <a href="/login/">Login</a>
                   </li>
                 </ul>
                 {/* <!-- Main Menu Ends --> */}

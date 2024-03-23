@@ -20,12 +20,12 @@ const Home = () => {
               <div className="container">
                 <div className="slider-text text-center ">
                   <h3 className="slide-title">
-                    <span>Welcome</span> to <span>Bybit</span>
+                    <span>Welcome</span> to <span> wealthlines</span>
                     <br />{" "}
                     <small>
                       {" "}
-                      Bybit Tradefunds institution, providing you secured and
-                      trusted capital investment service.
+                      Wealthlines institution, providing you secured and trusted
+                      capital investment service.
                     </small>
                   </h3>
                   <p>
@@ -67,10 +67,10 @@ const Home = () => {
                   <br />
 
                   <p>
-                    Bybit Tradefunds is 100% legal in 321 countries are at
-                    liberty to invest or trade Bitcoin with Bybit Tradefunds
-                    expert traders. Invest your Bitcoin here is 100% secured
-                    with good profit returns.
+                    Wealthlines is 100% legal in 321 countries are at liberty to
+                    invest or trade Bitcoin with Wealthlines expert traders.
+                    Invest your Bitcoin here is 100% secured with good profit
+                    returns.
                   </p>
                   <img src="/images/bg-home-013.jpg" alt="/" />
                   <br />
@@ -84,7 +84,7 @@ const Home = () => {
                     }}
                   >
                     <iframe
-                      src="https://bybit-tradefunds.com/presentation.mp4"
+                      src="https://wealthlines.orgs/presentation.mp4"
                       width="100%"
                       height="100%"
                       allowFullScreen
@@ -98,7 +98,7 @@ const Home = () => {
                   <br />
                   <p>
                     Available wallet which is working perfectly well, get your
-                    own and start investing, Trading with Bybit Tradefund
+                    own and start investing, Trading with wealthlines Tradefund
                     company.
                   </p>
                 </div>
@@ -118,13 +118,12 @@ const Home = () => {
                 <p className="about-content">
                   <p>
                     {" "}
-                    Bybit Tradefunds is an international commercial
-                    organization, it was created for the purpose of providing
-                    it's members with the safest and most secure capital
-                    investment services, with the best possible and achievable
-                    returns at the best risk management framework. There are no
-                    unrealistic promises presented here, just steady and
-                    consistent result.
+                    Wealthlines is an international commercial organization, it
+                    was created for the purpose of providing it's members with
+                    the safest and most secure capital investment services, with
+                    the best possible and achievable returns at the best risk
+                    management framework. There are no unrealistic promises
+                    presented here, just steady and consistent result.
                   </p>
 
                   <p>
@@ -556,7 +555,7 @@ const Home = () => {
                 <i className="lni lni-money-protection"></i>
                 <h5 className="services-title">REAL ESTATE MANAGEMENT</h5>
                 <p>
-                  Bybit Tradefunds offers investment opportunities in most major
+                  Wealthlines offers investment opportunities in most major
                   cities for multi-family, office, retail and hospitality
                   properties. The platform gives investors the opportunity to
                   invest as little as $50,000 in a project. The company partners
@@ -621,7 +620,7 @@ const Home = () => {
                 <div className="title-box">
                   <h2 className="main-title">Partnership Career</h2>
                   <p className="sub-title">
-                    Introducing Bybit Tradefunds Rejuvenated Affiliate Program
+                    Introducing Wealthlines Rejuvenated Affiliate Program
                   </p>
                 </div>
                 <p className="about-content">
@@ -673,8 +672,8 @@ const Home = () => {
                         Start Earning – We will pay cash or crypto for every
                         deposit made through your referral link. Share our
                         promotional pictures, banners and web page links in
-                        order to attract users to Bybit Tradefunds and maximise
-                        your affiliate earning.
+                        order to attract users to Wealthlines and maximise your
+                        affiliate earning.
                       </p>
                     </li>
                     <div className="discover-more-btn">
