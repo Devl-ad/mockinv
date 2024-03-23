@@ -221,7 +221,7 @@ const Register = () => {
 
                     {/* <!-- Copyright Text Starts --> */}
                     <p className="text-center copyright-text">
-                      Copyright © 2021 WORLDCRYPTO LTD All Rights Reserved
+                      Copyright © Wealthlines LTD All Rights Reserved
                     </p>
                     {/* <!-- Copyright Text Ends --> */}
                   </div>

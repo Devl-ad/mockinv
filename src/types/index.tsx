@@ -14,6 +14,11 @@ export interface RegisterResponse {
   email?: string | Array<string>;
   msg?: string;
 }
+export interface LoginResponse {
+  token: string;
+
+  error?: string;
+}
 
 export interface CustomButtonIn {
   loading: boolean;

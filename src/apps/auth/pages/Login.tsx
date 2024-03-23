@@ -1,6 +1,45 @@
 import IconInput from "../../../components/IconInput";
+import { LoginSchema } from "../schema";
+import { useFormik } from "formik";
+import { BASE_URL, axiosPublic } from "../../../utils";
+import CustomButton from "../../../components/CustomButton";
+import { useState } from "react";
+import { LoginResponse } from "../../../types";
+import { toast } from "react-toastify";
 
 const Login = () => {
+  const [loading, setloading] = useState(false);
+
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+    useFormik({
+      initialValues: {
+        email: "",
+
+        password: "",
+      },
+      validationSchema: LoginSchema(),
+      onSubmit(values) {
+        submitForm(values);
+      },
+    });
+
+  const submitForm = async (value: typeof values) => {
+    try {
+      const { data } = await axiosPublic.post<LoginResponse>("/login/", value);
+      console.log(data.token);
+      if (data.error) {
+        toast.error("Incorrect Email or password try again");
+      } else {
+        toast.info("Successfully Loggin");
+        window.location.href = `${BASE_URL}/loginuser/?token=${data.token}`;
+      }
+
+      setloading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <section className="auth-section">
@@ -37,11 +76,7 @@ const Login = () => {
                         <div className="s;p"></div>
 
                         {/* <!-- Form Starts --> */}
-                        <form
-                          className="login-form"
-                          method="POST"
-                          action="/login/"
-                        >
+                        <form className="login-form" onSubmit={handleSubmit}>
                           <IconInput
                             name="email"
                             required={true}
@@ -51,6 +86,11 @@ const Login = () => {
                             label={false}
                             children={null}
                             className={""}
+                            handleBlur={handleBlur}
+                            handleChange={handleChange}
+                            error={errors.email}
+                            touched={touched.email}
+                            value={values.email}
                           />
 
                           <IconInput
@@ -61,6 +101,11 @@ const Login = () => {
                             type="password"
                             label={false}
                             className={""}
+                            handleBlur={handleBlur}
+                            handleChange={handleChange}
+                            error={errors.password}
+                            touched={touched.password}
+                            value={values.password}
                           >
                             <div className="input-group-addon">
                               <span
@@ -74,12 +119,13 @@ const Login = () => {
 
                           {/* <!-- Submit Form Button Starts --> */}
                           <div className="form-group">
-                            <button
-                              className="btn btn-primary submit_btn"
+                            <CustomButton
+                              color="primary"
+                              text="Submit"
+                              loading={loading}
                               type="submit"
-                            >
-                              Login
-                            </button>
+                            />
+
                             <p className="text-center">
                               <a href="/password-reset/">Forgot Password ?</a>
                             </p>
@@ -95,7 +141,7 @@ const Login = () => {
                     </div>
                     {/* <!-- Copyright Text Starts --> */}
                     <p className="text-center copyright-text">
-                      Copyright © 2021 WORLDCRYPTO LTD All Rights Reserved
+                      Copyright © Wealthlines LTD All Rights Reserved
                     </p>
                     {/* <!-- Copyright Text Ends --> */}
                   </div>

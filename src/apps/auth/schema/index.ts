@@ -43,3 +43,19 @@ export const RegisterSchema = (
     //   .oneOf([yup.ref("password"), undefined], "Passwords must match")
     //   .required("Confirm password is required"),
   });
+
+export const LoginSchema = () =>
+  yup.object().shape({
+    email: yup
+      .string()
+      .email("Please enter a valid email")
+
+      .required("Email is required"),
+
+    password: yup
+      .string()
+      .min(5)
+      .max(12)
+
+      .required("Password Required"),
+  });
