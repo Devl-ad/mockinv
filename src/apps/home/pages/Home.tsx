@@ -48,13 +48,13 @@ const Home = () => {
       </div>
       {/* <!-- Slider Ends --> */}
 
-      <coingecko-coin-price-marquee-widget
+      {/* <coingecko-coin-price-marquee-widget
         coin-ids="bitcoin,ethereum,eos,ripple,litecoin"
         currency="usd"
         background-color="#ffffff"
         locale="en"
         font-color="#000000"
-      ></coingecko-coin-price-marquee-widget>
+      ></coingecko-coin-price-marquee-widget> */}
 
       {/* <!--  About Start  --> */}
       <section id="about" className="byt about-01 py-6">

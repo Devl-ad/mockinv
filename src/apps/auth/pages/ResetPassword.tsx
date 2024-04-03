@@ -1,5 +1,3 @@
-import IconInput from "../../../components/IconInput";
-
 const ResetPassword = () => {
   return (
     <>
@@ -38,35 +36,13 @@ const ResetPassword = () => {
                         <div className="s;p"></div>
 
                         {/* <!-- Form Starts --> */}
-                        <form className="login-form" method="POST" action="">
-                          <IconInput
-                            name="email"
-                            required={true}
-                            icon="fa-envelope"
-                            placeholder="Email"
-                            type="email"
-                            label={false}
-                            children={null}
-                            className={""}
-                          />
 
-                          {/* <!-- Submit Form Button Starts --> */}
-                          <div className="form-group">
-                            <button
-                              className="btn btn-primary submit_btn"
-                              type="submit"
-                            >
-                              Reset
-                            </button>
-                          </div>
-                          {/* <!-- Submit Form Button Ends --> */}
-                        </form>
                         {/* <!-- Form Ends --> */}
                       </div>
                     </div>
                     {/* <!-- Copyright Text Starts --> */}
                     <p className="text-center copyright-text">
-                      Copyright © 2021 WORLDCRYPTO LTD All Rights Reserved
+                      Copyright © WEALTHLINES LTD All Rights Reserved
                     </p>
                     {/* <!-- Copyright Text Ends --> */}
                   </div>

@@ -37,7 +37,7 @@ const Confirm = () => {
                     </div>
                     {/* <!-- Copyright Text Starts --> */}
                     <p className="text-center copyright-text">
-                      Copyright © 2021 WORLDCRYPTO LTD All Rights Reserved
+                      Copyright © WEALTHLINES LTD All Rights Reserved
                     </p>
                     {/* <!-- Copyright Text Ends --> */}
                   </div>

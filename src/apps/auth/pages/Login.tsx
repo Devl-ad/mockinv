@@ -127,7 +127,7 @@ const Login = () => {
                             />
 
                             <p className="text-center">
-                              <a href="/password-reset/">Forgot Password ?</a>
+                              {/* <a href="/password-reset/">Forgot Password ?</a> */}
                             </p>
                             <p className="text-center">
                               Don't have an account ?{" "}
