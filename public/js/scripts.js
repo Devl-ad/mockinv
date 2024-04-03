@@ -1,19 +1,19 @@
 (function ($) {
   "use strict";
 
-  $(window).on("load", function () {
-    /* ----------------------------------------------------------- */
-    /*  BITCOIN PRELOADER
-		/* ----------------------------------------------------------- */
+  // $(window).on("load", function () {
+  //   /* ----------------------------------------------------------- */
+  //   /*  BITCOIN PRELOADER
+  // 	/* ----------------------------------------------------------- */
 
-    if ($("#preloader")[0]) {
-      $("#preloader")
-        .delay(500)
-        .fadeTo(500, 0, function () {
-          $(this).remove();
-        });
-    }
-  });
+  //   if ($("#preloader")[0]) {
+  //     $("#preloader")
+  //       .delay(500)
+  //       .fadeTo(500, 0, function () {
+  //         $(this).remove();
+  //       });
+  //   }
+  // });
 
   $(document).ready(function () {
     /* csrf token */

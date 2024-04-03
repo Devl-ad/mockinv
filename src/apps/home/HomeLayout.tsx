@@ -6,18 +6,6 @@ import Footer from "./components/Footer";
 const HomeLayout = () => {
   return (
     <>
-      {/* <!-- SVG Preloader Starts --> */}
-      <div id="preloader" className="preloader">
-        <div className="sk-bounce">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      {/* <!-- SVG Preloader Ends --> */}
       {/* <!-- Sidebar --> */}
       <Sidebar />
       {/* <!-- End sidebar --> */}
