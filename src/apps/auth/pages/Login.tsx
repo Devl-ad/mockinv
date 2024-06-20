@@ -24,17 +24,17 @@ const Login = () => {
     });
 
   const submitForm = async (value: typeof values) => {
+    setloading(true);
     try {
       const { data } = await axiosPublic.post<LoginResponse>("/login/", value);
       console.log(data.token);
       if (data.error) {
+        setloading(false);
         toast.error("Incorrect Email or password try again");
       } else {
         toast.info("Successfully Loggin");
         window.location.href = `${BASE_URL}/loginuser/?token=${data.token}`;
       }
-
-      setloading(false);
     } catch (error) {
       console.log(error);
     }

@@ -46,6 +46,7 @@ const Register = () => {
     });
 
   const submitForm = async (value: typeof values) => {
+    setloading(true);
     try {
       const { data } = await axiosPublic.post<RegisterResponse>(
         "/register/",
@@ -54,6 +55,7 @@ const Register = () => {
       if (data.msg) {
         navigate("/confirm-mail");
       } else if (data.password) {
+        setloading(false);
         if (Array.isArray(data.password)) {
           data.password.forEach((msg) => {
             toast.error(msg);
@@ -62,6 +64,7 @@ const Register = () => {
           toast.error(data.password);
         }
       } else if (data.email) {
+        setloading(false);
         if (Array.isArray(data.email)) {
           data.email.forEach((msg) => {
             toast.error(msg);
@@ -70,8 +73,6 @@ const Register = () => {
           toast.error(data.email);
         }
       }
-
-      setloading(false);
     } catch (error) {
       console.log(error);
     }
