@@ -16,8 +16,9 @@ export interface RegisterResponse {
 }
 export interface LoginResponse {
   token: string;
-
+  otp_enabled: boolean;
   error?: string;
+  userid?: number;
 }
 
 export interface CustomButtonIn {
@@ -28,4 +29,13 @@ export interface CustomButtonIn {
   handleClick?: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;
+}
+
+export interface ISignInContext {
+  currentPage: number;
+  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
+  setstoreDate: React.Dispatch<React.SetStateAction<LoginResponse | undefined>>;
+  storeDate: LoginResponse | undefined;
+  setloading: React.Dispatch<React.SetStateAction<boolean>>;
+  laoding: boolean;
 }

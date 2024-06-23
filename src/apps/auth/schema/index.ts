@@ -59,3 +59,11 @@ export const LoginSchema = () =>
 
       .required("Password Required"),
   });
+
+export const twoFaSchema = () =>
+  yup.object().shape({
+    code: yup
+      .string()
+
+      .required("Code Required"),
+  });
