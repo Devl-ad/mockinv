@@ -210,8 +210,7 @@ const Register = () => {
                             />
 
                             <p className="text-center">
-                              already have an account ?{" "}
-                              <a href="/login">Login</a>
+                              already have an account ? <a href="/">Login</a>
                             </p>
                           </div>
                           {/* <!-- Submit Form Button Ends --> */}

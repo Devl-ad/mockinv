@@ -20,7 +20,7 @@ const Login = () => {
                 <div className="row">
                   <div className=" col-xl-12 justify-content-center ">
                     {/* <!-- Logo Starts --> */}
-                    <a className="visible-xs text-center" href="#">
+                    <a className="visible-xs text-center" href="/">
                       <img
                         id="logo"
                         style={{ width: "30%" }}

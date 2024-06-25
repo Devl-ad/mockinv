@@ -10,7 +10,7 @@ const AuthRoutes: RouteInterface[] = [
   {
     id: getRandomNumber(),
     element: <Login />,
-    path: "/login",
+    path: "/",
   },
   {
     id: getRandomNumber(),

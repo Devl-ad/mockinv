@@ -39,7 +39,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link className="scroll-link" to="/login">
+            <Link className="scroll-link" to="/">
               {" "}
               Login
             </Link>

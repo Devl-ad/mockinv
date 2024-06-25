@@ -36,7 +36,7 @@ const Home = () => {
                     >
                       Get started
                     </a>
-                    <a href="/login" className="slider btn btn-primary">
+                    <a href= "/" className="slider btn btn-primary">
                       Login
                     </a>
                   </p>
