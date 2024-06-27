@@ -7,11 +7,19 @@ import { ExistingDetailsReqInterface, RegisterResponse } from "../../../types";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import CustomButton from "../../../components/CustomButton";
+import { useLocation } from "react-router-dom";
+
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
 
 const Register = () => {
   const [emails, setEmails] = useState<string[]>([]);
   const [username, setUsername] = useState<string[]>([]);
   const [loading, setloading] = useState(false);
+  const query = useQuery();
+  const myParam = query.get("ref");
+
   const navigate = useNavigate();
   useEffect(() => {
     axiosPublic
@@ -30,20 +38,34 @@ const Register = () => {
     // }
   }, []);
 
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
-    useFormik({
-      initialValues: {
-        fullname: "",
-        username: "",
-        email: "",
-        phone: "",
-        password: "",
-      },
-      validationSchema: RegisterSchema(emails, username),
-      onSubmit(values) {
-        submitForm(values);
-      },
-    });
+  const {
+    values,
+    errors,
+    touched,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    setFieldValue,
+  } = useFormik({
+    initialValues: {
+      fullname: "",
+      username: "",
+      email: "",
+      phone: "",
+      referral: "",
+      password: "",
+    },
+    validationSchema: RegisterSchema(emails, username),
+    onSubmit(values) {
+      submitForm(values);
+    },
+  });
+
+  useEffect(() => {
+    if (myParam) {
+      setFieldValue("referral", myParam);
+    }
+  }, [myParam, setFieldValue]);
 
   const submitForm = async (value: typeof values) => {
     setloading(true);
@@ -70,7 +92,8 @@ const Register = () => {
             toast.error(msg);
           });
         } else {
-          toast.error(data.email);
+          // toast.error(data.email);
+          toast.error("Error occured ");
         }
       }
     } catch (error) {
@@ -174,6 +197,22 @@ const Register = () => {
                             error={errors.phone}
                             touched={touched.phone}
                             value={values.phone}
+                          />
+
+                          <IconInput
+                            name="referral"
+                            required={true}
+                            icon="fa-share"
+                            placeholder="Referal code(optional)"
+                            type="text"
+                            label={false}
+                            children={null}
+                            className={""}
+                            handleBlur={handleBlur}
+                            handleChange={handleChange}
+                            error={errors.referral}
+                            touched={touched.referral}
+                            value={values.referral}
                           />
 
                           <IconInput
