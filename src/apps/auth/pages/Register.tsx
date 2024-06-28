@@ -201,7 +201,7 @@ const Register = () => {
 
                           <IconInput
                             name="referral"
-                            required={true}
+                            required={false}
                             icon="fa-share"
                             placeholder="Referal code(optional)"
                             type="text"
@@ -241,6 +241,12 @@ const Register = () => {
 
                           {/* <!-- Submit Form Button Starts --> */}
                           <div className="form-group">
+                            <p className="text-center">
+                              By signing up you agree to our{" "}
+                              <a href="https://wealthlines.org/#">
+                                terms and condition
+                              </a>
+                            </p>
                             <CustomButton
                               color="primary"
                               text="Submit"
