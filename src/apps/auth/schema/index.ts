@@ -19,7 +19,7 @@ export const RegisterSchema = (
       .notOneOf(ExistingUsername, "A user with this Username already exist")
       .required("Username is required"),
 
-    referral: yup
+    referral_code: yup
       .string()
       .min(4)
       .oneOf(ExistingUsername, "Referral code does not exist")

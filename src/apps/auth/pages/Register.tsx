@@ -52,7 +52,7 @@ const Register = () => {
       username: "",
       email: "",
       phone: "",
-      referral: "",
+      referral_code: "",
       password: "",
     },
     validationSchema: RegisterSchema(emails, username),
@@ -63,7 +63,7 @@ const Register = () => {
 
   useEffect(() => {
     if (myParam) {
-      setFieldValue("referral", myParam);
+      setFieldValue("referral_code", myParam);
     }
   }, [myParam, setFieldValue]);
 
@@ -75,7 +75,8 @@ const Register = () => {
         value
       );
       if (data.msg) {
-        navigate("/confirm-mail");
+        toast.success("account created successfully");
+        navigate("/");
       } else if (data.password) {
         setloading(false);
         if (Array.isArray(data.password)) {
@@ -200,7 +201,7 @@ const Register = () => {
                           />
 
                           <IconInput
-                            name="referral"
+                            name="referral_code"
                             required={false}
                             icon="fa-share"
                             placeholder="Referal code(optional)"
@@ -210,9 +211,9 @@ const Register = () => {
                             className={""}
                             handleBlur={handleBlur}
                             handleChange={handleChange}
-                            error={errors.referral}
-                            touched={touched.referral}
-                            value={values.referral}
+                            error={errors.referral_code}
+                            touched={touched.referral_code}
+                            value={values.referral_code}
                           />
 
                           <IconInput
